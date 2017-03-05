@@ -19,7 +19,6 @@ public class DatagramChannelReceiver {
             final ByteBuffer buffer = ByteBuffer.allocate(50);
             System.out.println("Start listening ...");
             udpChannel.receive(buffer);
-            buffer.flip();
             System.out.println("Received data: " + new String(buffer.array()));
 
         } catch (final IOException e) {
